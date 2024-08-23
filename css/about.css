@@ -1,0 +1,19 @@
+/* Inherit main styles */
+@import url('style.css');
+
+.about {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2rem;
+    color: #e92777;
+}
+
+.about p {
+    font-size: 1.2rem;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+}

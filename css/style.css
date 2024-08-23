@@ -1,0 +1,457 @@
+/* General Styles */
+body {
+    font-family: 'Radley-Regular', serif;
+    margin: 0;
+    padding: 0;
+    color: #4A4A4A;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    background-color: #fff5f9; /* Baby pink */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: #e92777; /* Updated dark pink */
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    border-bottom: 2px solid #e92777;
+}
+
+.hero {
+    background: 
+        /* linear-gradient(120deg, #ffe3e9 25%, #ff699e 50%, #e92777 75%), Gradient overlay */
+        url('../images/starry.png') no-repeat center center; /* Background image */
+    background-size: cover; /* Make the image cover the entire hero section */
+    color: #fff5f9; /* Text color */
+    text-align: center;
+    padding: 250px 20px; /* Increased padding */
+    min-height: 400px; /* Set a minimum height to ensure enough space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero p {
+    color: #e92777;
+    font-size: 24px;
+    margin: 0; /* Remove margin to reduce space */
+    line-height: 1.2; /* Slightly increase line height for readability */
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: 80px; /* Adjusted font size */
+    margin: 0; /* Remove margin to reduce space */
+    line-height: 1.2; /* Slightly increase line height for readability */
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    text-shadow: 0 0 10px #e7a6c1, 0 0 20px #e92777, 0 0 30px #e92777, 0 0 40px #e92777, 0 0 50px #e92777, 0 0 60px #e92777, 0 0 70px #e92777;
+}
+
+.hero .cta-button {
+    background-color: #e92777; /* Updated dark pink */
+    color: #fff5f9; /* Updated white */
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px; /* Maintain some spacing above the button */
+}
+
+.hero .cta-button:hover {
+    background-color: #FF69B4; /* Lighter pink */
+}
+
+.about-event, .donate {
+    padding: 200px 20px;
+    text-align: center;
+}
+
+.about-event {
+    background-color: #fff5f9; /* Updated white */
+    background-image: url('../images/ribbon-watermark.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.about-event h2, .donate h2 {
+    color: #e92777; /* Updated dark pink */
+    margin-bottom: 20px;
+}
+
+.donate {
+    padding: 100px;
+}
+
+.donate h2{
+    color: #fff5f9; /* Updated baby pink */
+    text-shadow: 0 0 10px #e92777, 0 0 20px #e92777, 0 0 30px #e92777, 0 0 40px #e92777, 0 0 50px #e92777, 0 0 60px #e92777, 0 0 70px #e92777;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+.donate p{
+    font-family: 'Radley-Regular', serif;
+    color: #e92777;
+    font-weight: bold;
+}
+
+.donate-a{
+    font-family: 'Radley-Regular', serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.about-event h4{
+    color: #fff5f9; /* Updated baby pink */
+    text-shadow: 0 0 10px #e92777, 0 0 20px #e92777, 0 0 30px #e92777, 0 0 40px #e92777, 0 0 50px #e92777, 0 0 60px #e92777, 0 0 70px #e92777;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+.about-event p {
+    color: #c6135a; /* Baby pink */
+    font-size:18px;
+    font-weight: bold;
+}
+
+.highlight-box {
+    background-color: #e92777; /* Updated dark pink */
+    color: #fff5f9; /* Updated white */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.event-details {
+    background-color: #e92777; /* Updated dark pink */
+    color: #fff5f9; /* Updated white */
+    padding: 80px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.event-details h2 {
+    font-size: 30px;
+}
+
+.event-details p {
+    font-size: 15px;
+}
+
+.event-details .details-left, .event-details .details-right {
+    width: 45%;
+}
+
+footer {
+    background-color: #e92777; /* Updated dark pink */
+    color: #fff5f9; /* Updated white */
+    text-align: center;
+    padding: 20px;
+}
+
+footer .social-media a {
+    color: #fff5f9; /* Updated white */
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+footer .social-media a:hover {
+    color: #FF69B4; /* Lighter pink */
+}
+
+/* Font Face Definition */
+@font-face {
+    font-family: 'Bright Sunshine';
+    src: url('../fonts/BrightSunshine.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Radley-Regular';
+    src: url('../fonts/Radley-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Apply Font to Specific Text */
+.event-title {
+    font-family: 'Bright Sunshine', sans-serif;
+    font-size: 2.5rem;
+    color: #e92777; /* Dark pink */
+    margin-left: 10px;
+}
+
+.event-title-main {
+    font-family: 'Bright Sunshine', sans-serif;
+    font-size: 2.5rem;
+    color: #fff5f9; /* Baby pink */
+    margin-left: 10px;
+}
+
+.glow {
+    color: #fff5f9; /* Baby pink color */
+    text-shadow: 0 0 10px #e92777, 0 0 20px #e92777, 0 0 30px #e92777, 0 0 40px #e92777, 0 0 50px #e92777, 0 0 60px #e92777, 0 0 70px #e92777;
+    font-family: 'Bright Sunshine', sans-serif;
+}
+
+.glowradley {
+    color: #fff5f9; /* Baby pink color */
+    text-shadow: 0 0 10px #ffd4e6, 0 0 20px #e92777, 0 0 30px #fbb2d0, 0 0 40px #e92777, 0 0 50px #eda7c4, 0 0 60px #e92777, 0 0 70px #f0b8cf;
+    font-family: 'Radley-Regular', sans-serif;
+}
+
+/* Flip Card Styles */
+.flip-card {
+    background-color: transparent;
+    width: 600px; /* Increased width */
+    height: 380px; /* Increased height */
+    perspective: 1000px; /* Add perspective for 3D effect */
+    margin: 200px auto 0; /* Center the card */
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    border-radius: 15px; /* Rounded corners for inner card */
+    box-shadow: 0 0 15px rgba(232, 39, 119, 0.8); /* Glow effect with a bit more intensity */
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px; /* Ensure both sides have rounded corners */
+}
+
+.flip-card-front {
+    background-image: url('../images/flip-card-front-bg.png'); /* Add your image URL here */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    background-color: #e92777; /* Dark pink */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1.5rem; /* Adjust font size as needed */
+    padding: 5px;
+    border-radius: 15px; /* Rounded corners for the front side */
+}
+
+.flip-card-back {
+    background-color: #fff5f9; /* Baby pink */
+    color: #e92777; /* Dark pink */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: rotateY(180deg);
+    border-radius: 15px; /* Ensure rounded corners for the container */
+    overflow: hidden; /* Hide overflow to maintain rounded corners */
+}
+
+.flip-card-back iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 15px; /* Rounded corners for the iframe */
+}
+
+/* Ticket Options Section */
+.ticket-options {
+    background-color: #fff5f9;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.ticket-options h2 {
+    color: #fff5f9; /* Baby pink */
+    margin-bottom: 50px;
+    font-size: 25px;
+}
+
+.ticket-options h4 {
+    color: #fff5f9; /* Baby pink */
+    margin-bottom: 30px;
+    font-size: 35px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.card {
+    background-color: #fff5f9; /* Baby pink */
+    color: #e92777; /* Dark pink */
+    border-radius: 15px;
+    padding: 20px;
+    width: 250px;
+    min-height: 350px;
+    box-shadow: 0 4px 8px rgba(255, 2, 192, 0.203);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.card p {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.card .price {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.card .cta-button {
+    background-color: #e92777; /* Dark pink */
+    color: #fff5f9; /* White */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card.early{
+    transform: scale(1.1); /* Slightly larger */
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05); /* Float effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+}
+
+.card:active {
+    transform: translateY(-5px) scale(1); /* Slop pop effect */
+}
+
+/* Contact Me Section */
+.contact-me {
+    background-color: #fff5f9;
+    padding: 40px;
+    text-align: center;
+}
+
+.contact-me h2 {
+    color: #e92777;
+    font-family: 'Bright Sunshine', sans-serif;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    margin-bottom: 20px;
+}
+
+.contact-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-info li {
+    margin: 10px 0;
+}
+
+.contact-info a {
+    color: #e92777;
+    text-decoration: none;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    margin-bottom: 16px;
+    padding: 10px;
+    border: 1px solid #e92777;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    background-color: #e92777;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #c2155c;
+}
