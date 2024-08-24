@@ -3,17 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rotaractor Run: Miles in Pink</title>
+    <title>Miles in Pink</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <!-- Header Section -->
     <header>
         <div class="logo">
-            <img src="images/logo.png" alt="Rotaract Club of Aagneya">
+            <img src="images/logo.png" alt="Rotaract Club of Aagneya" loading="lazy">
             <span class="event-title glow">Miles in Pink</span>
         </div>
         <nav>
+            <div class="mobile-logo">
+                <img src="images/logo.png" alt="Rotaract Club of Aagneya" loading="lazy">
+            </div>
+            <button class="close-btn" id="close-btn">&times;</button>
             <ul>
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#about-event">About</a></li>
@@ -22,11 +27,32 @@
                 <li><a href="#donate">Donate</a></li>
                 <li><a href="#contact-me">Contact Us</a></li>
             </ul>
+            <!-- Social Media Links -->
+            <div class="social-media-nav">
+                <a href="#" target="_blank" class="social-icon facebook" title="Facebook">F</a>
+                <a href="#" target="_blank" class="social-icon twitter" title="Twitter">T</a>
+                <a href="https://www.instagram.com/rotaractbangaloreaagneya/#" target="_blank" class="social-icon instagram" title="Instagram">I</a>
+            </div>
         </nav>
+        <div class="hamburger-menu" id="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <script>
+            document.getElementById('hamburger-menu').onclick = function() {
+                document.querySelector('nav').classList.add('active');
+            };
+
+            document.getElementById('close-btn').onclick = function() {
+                document.querySelector('nav').classList.remove('active');
+            };
+        </script>
     </header>
 
     <!-- Hero Section -->
-    <section id="hero" class="hero">
+    <section id="hero" class="hero ">
+        <h2 class="">Rotaract Club of Bangalore Aagneya Presents</h2>
         <p>Rotaractor Run</p>
         <h1 class="event-title-main glow">Miles in Pink</h1>
         <p>Breast & Cervical Cancer Support Marathon</p>
@@ -134,7 +160,7 @@
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 Rotaract Club of Aagneya. All rights reserved.</p>
+        <p>&copy; 2024 Rotaract Club of Bangalore Aagneya. All rights reserved.</p>
         <div class="social-media">
             <a href="#" target="_blank">Facebook</a>
             <a href="#" target="_blank">Twitter</a>

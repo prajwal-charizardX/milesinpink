@@ -28,6 +28,23 @@ header .logo img {
     margin-right: 10px;
 }
 
+header {
+    background-color: #fff5f9; /* Baby pink */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between; /* Keep logo on the left, nav on the right */
+    align-items: center;
+}
+
+header nav {
+    margin-left: auto; /* Ensures the navigation stays to the right */
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
 header nav ul {
     list-style-type: none;
     margin: 0;
@@ -56,7 +73,7 @@ header nav ul li a:hover {
     background-size: cover; /* Make the image cover the entire hero section */
     color: #fff5f9; /* Text color */
     text-align: center;
-    padding: 250px 20px; /* Increased padding */
+    padding: 200px 20px; /* Increased padding */
     min-height: 400px; /* Set a minimum height to ensure enough space */
     display: flex;
     flex-direction: column;
@@ -80,6 +97,15 @@ header nav ul li a:hover {
     margin-bottom: 10px;
     padding-bottom: 20px;
     text-shadow: 0 0 10px #e7a6c1, 0 0 20px #e92777, 0 0 30px #e92777, 0 0 40px #e92777, 0 0 50px #e92777, 0 0 60px #e92777, 0 0 70px #e92777;
+}
+
+.hero h2 {
+    color: #e92777;
+    font-size: 40px; /* Adjusted font size */
+    margin: 0; /* Remove margin to reduce space */
+    line-height: 1.2; /* Slightly increase line height for readability */
+    margin-bottom: 10px;
+    padding-bottom: 20px;
 }
 
 .hero .cta-button {
@@ -203,6 +229,7 @@ footer .social-media a:hover {
     src: url('../fonts/BrightSunshine.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
+    font-display: swap; /* Add this line */
 }
 
 @font-face {
@@ -210,6 +237,7 @@ footer .social-media a:hover {
     src: url('../fonts/Radley-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
+    font-display: swap; /* Add this line */
 }
 
 /* Apply Font to Specific Text */
@@ -454,4 +482,387 @@ footer .social-media a:hover {
 
 .contact-form button:hover {
     background-color: #c2155c;
+}
+
+@media (max-width: 768px) {
+    /* Flip Card Styles for Mobile */
+    .flip-card {
+        width: 90%; /* Full width on mobile with some margin */
+        max-height: 215px; /* Set max height */
+        margin: 20px auto; /* Center the card with vertical margin */
+    }
+
+    .flip-card-inner {
+        border-radius: 10px; /* Keep rounded corners */
+        position: relative; /* Ensure proper positioning */
+        width: 100%;
+        height: 100%;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 0 15px rgba(232, 39, 119, 0.8); /* Glow effect */
+    }
+
+    .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px; /* Consistent padding */
+        box-sizing: border-box; /* Include padding in width/height calculation */
+        font-size: medium;
+    }
+
+    .flip-card-front {
+        background-image: url('../images/flip-card-front-bg.png'); /* Add your image URL here */
+        background-size: cover; /* Cover the entire area */
+        background-position: center; /* Center the image */
+        color: white;
+        /* Ensure no extra padding/margin on the sides */
+    }
+
+    .flip-card-back {
+        background-color: #fff5f9; /* Baby pink */
+        color: #e92777; /* Dark pink */
+        transform: rotateY(180deg); /* Flip effect */
+        /* Ensure no extra padding/margin on the sides */
+    }
+
+    .about-event {
+        padding: 30px;
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    /* Ticket Options Section for Mobile */
+    .card-container {
+        display: flex;
+        flex-direction: column; /* Stack cards vertically */
+        gap: 20px; /* Reduced gap */
+        align-items: center;
+    }
+
+    .card {
+        width: 50%; /* Full width on mobile */
+        min-height: 300px; /* Reduced height */
+        padding: 15px; /* Reduced padding */
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .card h3 {
+        font-size: 1.2rem; /* Reduced font size */
+    }
+
+    .card p {
+        font-size: 0.9rem; /* Reduced font size */
+    }
+
+    .card .price {
+        font-size: 1rem; /* Reduced font size */
+    }
+
+    .card .cta-button {
+        font-size: 16px; /* Reduced font size */
+        padding: 8px 15px; /* Reduced padding */
+    }
+}
+
+/* Ensure other sections are also responsive */
+@media (max-width: 768px) {
+    .hero {
+        padding: 80px 10px; /* Reduced padding for mobile */
+    }
+
+    .hero p {
+        font-size: 16px; /* Reduced font size */
+    }
+
+    .hero h1 {
+        font-size: 40px; /* Reduced font size */
+    }
+
+    .hero h2 {
+        font-size: 25px; /* Reduced font size */
+    }
+
+    .hero .cta-button {
+        font-size: 14px; /* Reduced font size */
+        padding: 8px 15px; /* Reduced padding */
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav {
+        position: fixed; /* Ensure it stays on top */
+        top: 0;
+        left: -100%; /* Hide off-screen initially */
+        width: 80%;
+        height: 100vh;
+        background-color: #fff5f9;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: left 0.3s ease;
+        z-index: 1000; /* High z-index to ensure it is on top */
+    }
+    
+    /* When nav is active (open) */
+    nav.active {
+        left: 0; /* Slide in from the left */
+    }
+      
+    .mobile-logo {
+        margin-bottom: 20px; /* Space between logo and navigation items */
+        text-align: center; /* Center the logo horizontally */
+    }
+
+    .mobile-logo img {
+        width: 100px; /* Adjust logo size as needed */
+        height: auto;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 24px;
+        border: none;
+        background: none;
+        color: #e92777;
+        cursor: pointer;
+        z-index: 1001; /* Higher z-index to ensure it's on top of the nav */
+    }
+
+    .social-media-nav {
+        position: absolute;
+        bottom: 20px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .social-icon {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        margin: 0 10px;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+        background-color: #e92777;
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+    }
+    
+    .social-icon.facebook {
+        background-color: #e92777;
+    }
+    
+    .social-icon.twitter {
+        background-color: #e92777;
+    }
+    
+    .social-icon.instagram {
+        background-color: #e92777;
+    }
+    
+    .social-icon:hover {
+        opacity: 0.8;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Space between menu items */
+    }
+
+    nav ul li a {
+        color: #e92777; /* Updated dark pink */
+        font-weight: bold;
+        font-size: 18px; /* Adjust font size as needed */
+    }
+
+    .hamburger-menu {
+        display: block; /* Ensure hamburger menu is visible */
+    }
+
+    .hamburger-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 25px;
+        width: 35px;
+        cursor: pointer;
+    }
+
+    .hamburger-menu span {
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: #e92777;
+        border-radius: 2px;
+    }
+}
+
+@media (max-width: 768px) {
+    .what-to-expect, .countdown-to-event, .support-the-cause, .register-for-event {
+        padding: 150px 10px; /* Reduced padding */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .event-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero h1 {
+        font-size: 50px; /* Adjust font size for mobile */
+    }
+
+    .hero h2 {
+        font-size: 30px; /* Adjust font size for mobile */
+    }
+
+    .about-event h4 {
+        font-size: 20px; /* Adjust font size for mobile */
+    }
+
+    .about-event p {
+        font-size: 16px; /* Adjust font size for mobile */
+    }
+
+    .donate h2 {
+        font-size: 24px; /* Adjust font size for mobile */
+    }
+
+    .event-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .event-details .details-left,
+    .event-details .details-right {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .event-details .details-right {
+        margin-bottom: 0;
+    }
+
+    .hero p {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    header h1 {
+        font-size: 18px; /* Adjust header title size for mobile phones */
+    }
+
+    .event-title {
+        font-size: 1.8rem;
+    }
+
+    .hero h1 {
+        font-size: 36px; /* Adjust font size for smaller screens */
+    }
+
+    .hero h2 {
+        font-size: 24px; /* Adjust font size for smaller screens */
+    }
+
+    .about-event h4 {
+        font-size: 25px; /* Adjust font size for smaller screens */
+    }
+
+    .about-event p {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    .donate h2 {
+        font-size: 25px; /* Adjust font size for smaller screens */
+    }
+
+    .hero p {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+
+    .event-details h2 {
+        font-size: 25px;
+    }
+
+    .event-details h1 {
+        font-size: 15px;
+    }
+
+    .ticket-options h4 {
+        font-size: 30px;
+    }
+
+    .ticket-options h2 {
+        font-size: 20px;
+    }
+
+    .event-details p {
+        font-size: 14px;
+    }
+
+    footer .social-media a {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-logo {
+        display: none;
+    }
+
+    .social-media-nav {
+        display: none;
+    }
+
+    .close-btn {
+        display: none;
+    }
+}
+
+/* Header Styles */
+header {
+    position: relative;
+    z-index: 1; /* Ensures the header is above other content */
+}
+
+/* Glow effect below the header */
+header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px; /* Adjust to position the glow below the header */
+    width: 100%;
+    height: 10px; /* Adjust based on desired glow height */
+    background: rgba(255, 0, 238, 0.5); /* Change color to match your design */
+    filter: blur(10px); /* Adjust blur for the glow effect */
+    z-index: -1; /* Ensures it is below the header content */
 }

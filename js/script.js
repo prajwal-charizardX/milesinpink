@@ -105,3 +105,15 @@ app.post('/register', async (req, res) => {
 app.listen(3000, () => {
     console.log('Server running on port 3000');
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const navUl = document.querySelector('nav ul');
+
+    hamburgerMenu.addEventListener('click', function() {
+        navUl.classList.toggle('active');
+    });
+});
+
+
